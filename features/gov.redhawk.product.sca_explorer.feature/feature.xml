@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     REDHAWK HEADER
+ 
+     Identification: $Revision: 9221 $
+-->
+<feature
+      id="gov.redhawk.product.sca_explorer.feature"
+      label="%featureName"
+      version="1.8.1.qualifier"
+      provider-name="%featureProvider"
+      plugin="gov.redhawk.product.sca_explorer"
+      os="aix,hpux,linux,macosx,qnx,solaris,win32"
+      ws="carbon,gtk,motif,photon,win32,wpf"
+      arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license>
+      %license
+   </license>
+
+   <includes
+         id="com.tasc.nxm.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="com.tasc.nxm.source"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.nxm.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.nxm.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.edit.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rcp"
+         version="0.0.0"/>
+
+   <includes
+         id="com.tasc.swb.plots.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="com.tasc.swb.plots.nxm.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.draw2d"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.validation"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.gef"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.transaction"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.xsd.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.workspace"
+         version="0.0.0"/>
+
+   <includes
+         id="com.tasc.swb.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="com.tasc.swb.cots.repository.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.common"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.common.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.sdk.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.user.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.sca.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.ui.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="mil.jpeojtrs.sca.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.wst.xml_ui.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.wst.server_core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.sca.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.interfaces.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.rcp.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rcp.patch"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rcp.source.patch"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.sca_explorer.eclipse.platform"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.sca_explorer.support"
+         version="0.0.0"/>
+
+   <plugin
+         id="gov.redhawk.product.sca_explorer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

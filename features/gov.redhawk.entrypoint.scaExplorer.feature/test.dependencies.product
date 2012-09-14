@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+<!-- 
+	This product is used only to verify that all feature plug-in dependencies are resolved. Note that package javax.servlet
+	will be unresolved,as it is exported during run-time by org.eclipse.equinox.sevletbridge
+-->
+
+<product name="Test" uid="test.dependencies" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="gov.redhawk.entrypoint.scaExplorer.feature" version="1.0.0.qualifier"/>
+   </features>
+
+
+</product>
