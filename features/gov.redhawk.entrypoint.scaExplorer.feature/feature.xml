@@ -7,7 +7,7 @@
 <feature
       id="gov.redhawk.entrypoint.scaExplorer.feature"
       label="%featureName"
-      version="1.8.1.qualifier"
+      version="1.8.2.qualifier"
       provider-name="%featureProvider">
 
    <description>
@@ -585,21 +585,6 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="gov.redhawk.sca.ui.singledomain"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="gov.redhawk.sca.ui.singledomain.rap"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
 </feature>

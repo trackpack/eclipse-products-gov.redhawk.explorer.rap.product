@@ -67,12 +67,4 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		Shell shell = configurer.getWindow().getShell();
 		shell.setMaximized(true);
 	}
-
-	@Override
-	public void createWindowContents(final Shell shell) {
-		this.shell = shell;
-		drawBannerAndWindowContents(shell);
-	}
-
-
 }
