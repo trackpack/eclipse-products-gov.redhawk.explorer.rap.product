@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project default="buildAll" basedir=".">
+    <tstamp />
+    <property name="timestamp" value="${DSTAMP}${TSTAMP}" />
+    <property name="qualifier" value="v${timestamp}" />
+    <property file="${basedir}/build.properties" />
+    <property environment="env" />
+ 
+    <target name="featureBuild">
+         <java classpath="${eclipse.dir}/plugins/${equinox.launcher.jar}" classname="org.eclipse.core.launcher.Main" fork="true" failonerror="true" jvm="${env.JAVA_HOME}/bin/java">
+            <arg value="-application"/>
+            <arg value="org.eclipse.ant.core.antRunner"/>
+            <arg value="-data"/>
+            <arg value="${buildDirectory}/workspace"/>
+            <arg value="buildFeature"/>
+            <arg value="-DprojectName=${projectName}"/>
+        </java> 
+    </target>
+
+    <target name="buildFeature">
+        <ant antfile="${eclipse.pdebuild.scripts}/build.xml">
+            <property name="gitroot" value="${gitroot}"/>
+            <property name="basebuilder" value="${basebuilder}"/>
+            <property name="tag" value="${tag}"/>
+            <property name="buildDirectory" value="${buildDirectory}"/>
+            <property name="mapsDirectory" value="${basedir}/maps"/>
+            <property name="builder" value="${basedir}/components/${projectName}"/>
+            <property name="baseLocation" value="${buildDirectory}/target/eclipse"/>
+            <property name="repoBaseLocation" value="${repoBaseLocation}"/>
+            <property name="transformedRepoLocation" value="${buildDirectory}/target/eclipse"/>
+            <property name="forceContextQualifier" value="${qualifier}"/>
+            <property name="qualifier" value="${qualifier}"/>
+            <property name="individualSourceBundles" value="true"/>
+            <property name="flattenDependencies" value="true"/>
+            <property name="p2.gathering" value="true"/>
+            <property name="p2.compress" value="true"/>
+            <property name="p2.category.definition" value="file:${buildDirectory}/features/${projectName}/category.xml"/>
+            <property name="p2.build.repo" value="file:${buildDirectory}/${buildLabel}/p2/${projectName}"/>
+            <property name="publishP2" value="${publishP2}"/>
+            <property name="projectName" value="${projectName}"/>
+            <!--p2 mirror is failing to set collecting folder-->
+            <property name="collectingFolder" value="${projectName}"/>
+        </ant>
+    </target>
+
+    <target name="clean">
+        <delete dir="${buildDirectory}"/>
+        <delete dir="${basedir}/scmCache"/>
+    </target>
+
+    <target name="buildAll" depends="clean,featureBuild"/>
+</project>
