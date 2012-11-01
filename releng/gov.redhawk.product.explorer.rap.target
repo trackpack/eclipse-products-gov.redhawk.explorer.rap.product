@@ -60,6 +60,8 @@
 <unit id="org.eclipse.emf.rap.source.feature.group" version="2.6.1.v20100914-1218"/>
 <unit id="org.eclipse.rap.ui.views.properties.tabbed.feature.feature.group" version="1.4.0.201210151435"/>
 <unit id="org.eclipse.transaction.ui.rap.feature.group" version="1.4.0.201210111617"/>
+<unit id="org.apache.commons.lang" version="2.4.0.v201005080502"/>
+<unit id="org.eclipse.emf.mapping.ecore2xml" version="2.5.0.v20100521-1847"/>
 <repository location="http://pinkman.villains.techma.com/p2/redhawk-target/gov.redhawk.explorer.rap.product/helios/base"/>
 </location>
 </locations>
