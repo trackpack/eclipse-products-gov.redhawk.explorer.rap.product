@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="REDHAWK Core RAP Target" sequenceNumber="6">
+<target name="REDHAWK Core RAP Target" sequenceNumber="11">
 <locations>
 <location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.commons.io.feature.group" version="2.2.0.201204271433"/>
-<repository location="file:/data/p2/redhawk-target/gov.redhawk.explorer.rap.product/helios/develop/org.apache.commons.io/"/>
+<unit id="mil.jpeojtrs.sca.sdk.feature.group" version="2.2.2.develop-SNAPSHOT"/>
+<repository location="http://pinkman.villains.techma.com/p2/redhawk-target/gov.redhawk.explorer.rap.product/helios/develop/mil.jpeojtrs.sca"/>
 </location>
 <location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="gov.redhawk.sca.rap.sdk.feature.group" version="1.8.2.develop-SNAPSHOT"/>
+<repository location="http://pinkman.villains.techma.com/p2/redhawk-target/gov.redhawk.explorer.rap.product/helios/develop/gov.redhawk.sca.rap"/>
+</location>
+<location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.apache.commons.io.feature.group" version="2.2.0.201204271433"/>
 <unit id="org.eclipse.equinox.server.core.feature.group" version="1.0.1.R36x_v20101007-7K7QEtDVci4YrnH_88QAH"/>
 <unit id="org.eclipse.help.feature.group" version="1.2.0.v20100427-7e7jEQFEp4jsWcboLU9l93"/>
 <unit id="org.eclipse.platform.feature.group" version="3.6.1.r361_v20100909-9gF78GrkFqw7GrsZnvz0JWNTeb6fue6896L"/>
 <unit id="org.eclipse.equinox.executable.feature.group" version="3.4.2.R36x_v20110125-7N7K7bF8zk1BAKMh0iz0t94miBLY"/>
+<unit id="org.eclipse.rcp.feature.group" version="3.6.1.r361_v20100827-9OArFLdFjY-ThSQXmKvKz0_T"/>
 <unit id="org.eclipse.emf.ecore.feature.group" version="2.6.1.v20100914-1218"/>
 <unit id="org.eclipse.emf.common.source.feature.group" version="2.6.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.common.feature.group" version="2.6.0.v20100914-1218"/>
+<unit id="org.eclipse.emf.databinding.feature.group" version="1.2.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.6.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.edit.feature.group" version="2.6.0.v20100914-1218"/>
+<unit id="org.eclipse.emf.databinding.edit.feature.group" version="1.2.0.v20100914-1218"/>
+<unit id="org.eclipse.emf.transaction.feature.group" version="1.4.0.v20100428-2315-377-8s734C3E7D15D6B"/>
+<unit id="org.eclipse.emf.transaction.source.feature.group" version="1.4.0.v20100428-2315-377-8s734C3E7D15D6B"/>
+<unit id="org.eclipse.emf.workspace.feature.group" version="1.4.0.v20100428-2315-36-8s734C367E3CBC7"/>
+<unit id="org.eclipse.emf.workspace.source.feature.group" version="1.4.0.v20100428-2315-36-8s734C367E3CBC7"/>
 <unit id="org.eclipse.emf.rap.common.ui.feature.group" version="2.6.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.rap.edit.ui.feature.group" version="2.6.1.v20100914-1218"/>
 <unit id="org.eclipse.emf.rap.feature.group" version="2.6.1.v20100914-1218"/>
 <unit id="org.eclipse.emf.rap.sdk.feature.group" version="2.6.1.v20100914-1218"/>
+<unit id="org.eclipse.emf.validation.feature.group" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6"/>
+<unit id="org.eclipse.emf.validation.source.feature.group" version="1.4.0.v20100428-2315-479-9oB56N5BBR6LCA6"/>
 <unit id="org.eclipse.equinox.compendium.sdk.feature.group" version="3.6.1.R36x_v20101014-7V7RFiwFLSgEt4Pctn77c7J"/>
 <unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.6.1.r36x_v20110210-7sF99FsNFS-Ci4TSP4RDFHLIA5B3"/>
 <unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="1.0.1.R36x_v20110210-4-09oB5865H6L02434"/>
@@ -33,24 +47,20 @@
 <unit id="org.eclipse.equinox.server.p2.feature.group" version="1.0.1.R36x_v20101007-7x7IFI3FOf7yk63X6z0kz-Z2T158"/>
 <unit id="org.eclipse.rap.cnf.feature.feature.group" version="0.1.0.20120709-1436"/>
 <unit id="gov.redhawk.core.feature.feature.group" version="1.8.1.201209131532"/>
-<unit id="gov.redhawk.interfaces.feature.group" version="1.7.0.v201210121752"/>
-<unit id="gov.redhawk.interfaces.sdk.feature.group" version="1.7.0.v201210121752"/>
-<unit id="gov.redhawk.sca.rap.feature.feature.group" version="1.1.0.v201210121752"/>
-<unit id="gov.redhawk.sca.rap.sdk.feature.group" version="1.1.0.v201210121752"/>
-<unit id="gov.redhawk.sca.rap.source.feature.group" version="1.1.0.v201210121752"/>
 <unit id="org.eclipse.rap.runtime.sdk.feature.group" version="1.3.2.20110216-1023"/>
-<unit id="mil.jpeojtrs.sca.sdk.feature.group" version="2.2.2.v201210091527"/>
 <unit id="org.eclipse.equinox.server.servletbridge.feature.group" version="1.0.0.v20100510-42A79oB5855K5E"/>
 <unit id="org.eclipse.equinox.server.simple.feature.group" version="1.0.0.v20100510-44DF8s734C48662444"/>
 <unit id="org.eclipse.emf.ecore.source.feature.group" version="2.6.1.v20100914-1218"/>
+<unit id="org.eclipse.emf.databinding.source.feature.group" version="1.2.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.ecore.edit.source.feature.group" version="2.6.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.edit.source.feature.group" version="2.6.0.v20100914-1218"/>
+<unit id="org.eclipse.emf.databinding.edit.source.feature.group" version="1.2.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.rap.common.ui.source.feature.group" version="2.6.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.rap.edit.ui.source.feature.group" version="2.6.1.v20100914-1218"/>
 <unit id="org.eclipse.emf.rap.source.feature.group" version="2.6.1.v20100914-1218"/>
 <unit id="org.eclipse.rap.ui.views.properties.tabbed.feature.feature.group" version="1.4.0.201210151435"/>
 <unit id="org.eclipse.transaction.ui.rap.feature.group" version="1.4.0.201210111617"/>
-<repository location="file:/data/p2/redhawk-target/gov.redhawk.explorer.rap.product/helios/develop/eclipse/"/>
+<repository location="http://pinkman.villains.techma.com/p2/redhawk-target/gov.redhawk.explorer.rap.product/helios/base"/>
 </location>
 </locations>
 </target>
