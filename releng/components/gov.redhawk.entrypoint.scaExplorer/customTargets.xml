@@ -62,7 +62,7 @@
 
          <!-- Copy the webapp template from the feature into the main webapp location -->
          <copy todir="${webappLocation}">
-             <fileset dir="${webappLocation}/WEB-INF/eclipse/features/gov.redhawk.entrypoint.scaExplorer.feature_1.8.2.${qualifier}/templates"/>
+             <fileset dir="${webappLocation}/WEB-INF/eclipse/features/gov.redhawk.entrypoint.scaExplorer.feature_1.9.0.${qualifier}/templates"/>
          </copy>
          <war destfile="${buildDirectory}/${buildLabel}/sca.war" webxml="${webappLocation}/WEB-INF/web.xml" basedir="${webappLocation}" includes="WEB-INF/eclipse/**, WEB-INF/web.xml">
              <lib dir="${webappLocation}/WEB-INF/lib" />
