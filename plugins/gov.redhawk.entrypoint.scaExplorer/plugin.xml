@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This file is protected by Copyright.
+    Please refer to the COPYRIGHT file distributed with this source distribution.
+
+    This file is part of REDHAWK IDE.
+
+    All rights reserved.  This program and the accompanying materials are made available under
+    the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html.
+-->
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="gov.redhawk.entrypoint.scaExplorer.ScaExplorerPerspective"
+            fixed="false"
+            id="gov.redhawk.product.sca_explorer.perspective"
+            name="%perspective.name">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.activities">
+      <activity
+            description="%activity.description"
+            id="gov.redhawk.product.sca_explorer.activity.hidden"
+            name="%activity.name">
+         <enabledWhen>
+            <with
+                  variable="gov.redhawk.product.sca_explorer.with2">
+            </with>
+         </enabledWhen>
+      </activity>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.ui\.edit\.text\.delimiter.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            isEqualityPattern="true"
+            pattern="org.eclipse.ui.edit.text.openLocalFile">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.ui\.externaltools/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.search/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.ui\.ide/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.ui\.ide/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.team\.ui/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.equinox\.p2\.ui\.sdk/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.debug\.ui/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="com\.tasc\.swb\.ui/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="com\.tasc\.nxm/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="com\.tasc\.swb\.help/.*">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            isEqualityPattern="true"
+            pattern="org.eclipse.platform/org.eclipse.platform.team">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            isEqualityPattern="true"
+            pattern="org.eclipse.ui.file.import">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            isEqualityPattern="true"
+            pattern="org.eclipse.ui.file.export">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            isEqualityPattern="true"
+            pattern="org.eclipse.ui.newWizard">
+      </activityPatternBinding>
+      <activityPatternBinding
+            activityId="gov.redhawk.product.sca_explorer.activity.hidden"
+            pattern="org\.eclipse\.emf\.validation\.ui/.*">
+      </activityPatternBinding>
+   </extension>
+   <extension
+         id="gov.redhawk.entrypoint.sca_explorer.scaentrypoint"
+         name="SCA Explorer"
+         point="org.eclipse.rap.ui.entrypoint">
+      <entrypoint
+            class="gov.redhawk.entrypoint.scaExplorer.ScaWorkbench"
+            id="gov.redhawk.entrypoint.sca_explorer.entrypoint"
+            path="/explorer">
+      </entrypoint>
+   </extension>
+   <extension
+         point="org.eclipse.rap.ui.branding">
+      <branding
+            defaultEntrypointId="gov.redhawk.entrypoint.sca_explorer.entrypoint1"
+            favicon="icons/alt_launcher.ico"
+            id="gov.redhawk.entrypoint.sca_explorer.branding1"
+            servletName="sca"
+            title="SCA Explorer">
+      </branding>
+   </extension>
+</plugin>
