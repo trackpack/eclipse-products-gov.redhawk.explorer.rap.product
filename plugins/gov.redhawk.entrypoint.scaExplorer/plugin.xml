@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-     REDHAWK HEADER
- 
-     Identification: $Revision: 2231 $
+    This file is protected by Copyright.
+    Please refer to the COPYRIGHT file distributed with this source distribution.
+
+    This file is part of REDHAWK IDE.
+
+    All rights reserved.  This program and the accompanying materials are made available under
+    the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html.
 -->
 <?eclipse version="3.4"?>
 <plugin>
@@ -102,21 +107,21 @@
       </activityPatternBinding>
    </extension>
    <extension
-         id="gov.redhawk.entrypoint.sca_ecplorer.scaentrypoint"
+         id="gov.redhawk.entrypoint.sca_explorer.scaentrypoint"
          name="SCA Explorer"
          point="org.eclipse.rap.ui.entrypoint">
       <entrypoint
             class="gov.redhawk.entrypoint.scaExplorer.ScaWorkbench"
-            id="gov.redhawk.entrypoint.sca_ecplorer.entrypoint1"
-            parameter="go">
+            id="gov.redhawk.entrypoint.sca_explorer.entrypoint"
+            path="/explorer">
       </entrypoint>
    </extension>
    <extension
          point="org.eclipse.rap.ui.branding">
       <branding
-            defaultEntrypointId="gov.redhawk.entrypoint.sca_ecplorer.entrypoint1"
+            defaultEntrypointId="gov.redhawk.entrypoint.sca_explorer.entrypoint1"
             favicon="icons/alt_launcher.ico"
-            id="gov.redhawk.entrypoint.sca_ecplorer.branding1"
+            id="gov.redhawk.entrypoint.sca_explorer.branding1"
             servletName="sca"
             title="SCA Explorer">
       </branding>

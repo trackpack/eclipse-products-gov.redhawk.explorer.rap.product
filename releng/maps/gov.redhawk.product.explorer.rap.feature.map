@@ -1,2 +1,0 @@
-feature@gov.redhawk.entrypoint.scaExplorer.feature=GIT,tag=@TAG@,repo=@REPO@,path=features/gov.redhawk.entrypoint.scaExplorer.feature
-plugin@gov.redhawk.entrypoint.scaExplorer=GIT,tag=@TAG@,repo=@REPO@,path=plugins/gov.redhawk.entrypoint.scaExplorer

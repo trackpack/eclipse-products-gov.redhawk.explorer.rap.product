@@ -1,50 +1,38 @@
 <project name="customTargets overrides" >
     <import file="${eclipse.pdebuild.templates}/headless-build/customTargets.xml"/>
 
-    <!-- ===================================================================== -->
-    <!-- Check out map files from correct repository -->
-    <!-- Replace values for mapsCheckoutTag as desired. -->
-    <!-- ===================================================================== -->
-    <target name="getMapFiles">
-        <copy todir="${buildDirectory}/maps">
-            <fileset dir="${mapsDirectory}"/>
-        </copy>
-        <replace dir="${buildDirectory}/maps" token="@REPO@" value="${gitroot}"/>
-        <replace dir="${buildDirectory}/maps" token="@TAG@" value="${tag}"/>
-    </target>
-
-    <!-- ===================================================================== -->
-    <!--  Steps to do after the repositories have been processed -->
-    <!-- ===================================================================== -->
-    <target name="postProcessRepos">
-        <mkdir dir="${buildDirectory}/${buildLabel}"/>
-        <symlink link="${buildDirectory}/ouptut" resource="${buildDirectory}/${buildLabel}" overwrite="true"/>
-        <unzip src="${buildDirectory}/${deltapack}" dest="${buildDirectory}/target"/>
-    </target>
-
-    
-    <target name="postFetch">
-        <replace dir="${buildDirectory}/plugins" value="${qualifier}" token="@buildID@"/>
+    <target name="postSetup">
+	<copy todir="${buildDirectory}/plugins">
+	    <fileset dir="${basedir}/../plugins">
+	        <exclude name="**/*.class"/>
+	    </fileset>
+      	</copy>
+	<copy todir="${buildDirectory}/features">
+	    <fileset dir="${basedir}/../features"/>
+      	</copy>
+      	<mkdir dir="${buildDirectory}/tmp/${collectingFolder}/bin"/>
+        <replace dir="${buildDirectory}/plugins" value="${qualifier}" token="@buildId@"/>
         <replace dir="${buildDirectory}/plugins" value="${buildLabel}" token="@buildLabel@"/>
+        <replace dir="${buildDirectory}/features" value="${qualifier}" token="@buildId@"/>
+        <replace dir="${buildDirectory}/features" value="${buildLabel}" token="@buildLabel@"/>
     </target>
 
     <!-- ===================================================================== -->
     <!-- Steps to do after the build is done. -->
     <!-- ===================================================================== -->
-    <target name="postBuild" depends="gatherLogs,createWebApp">
-    
+    <target name="postBuild" depends="createWebApp,publish">
     </target>
 
     <target name="createWebApp">
-         <property name="webappRepo" value="${buildDirectory}/${buildLabel}/repository/${webapp.name}"/>
-         <property name="webappLocation" value="${buildDirectory}/${buildLabel}/${webapp.name}"/>
+         <property name="webappRepo" value="${buildDirectory}/${buildLabel}/repository/sca"/>
+         <property name="webappLocation" value="${buildDirectory}/${buildLabel}/sca"/>
          <mkdir dir="${webappLocation}/WEB-INF/eclipse"/>
          <mkdir dir="${webappLocation}/WEB-INF/lib"/>
 
      <!--Mirror the target and entrypoint repos together and then transform them to runnable format-->
          <p2.mirror>
             <source location="${buildDirectory}/target/eclipse"/>
-            <source location="${buildDirectory}/${buildLabel}/p2/gov.redhawk.entrypoint.scaExplorer"/>
+            <source location="${buildDirectory}/${buildLabel}/p2/gov.redhawk.entrypoint.scaExplorer.feature"/>
             <destination location="${webappRepo}"/>
             <iu id="gov.redhawk.entrypoint.scaExplorer.feature.feature.group"/>
             <!--Not sure why this iu needs to be explicitly listed here for repo2runnable to work correctly-->
@@ -64,16 +52,21 @@
          <copy todir="${webappLocation}">
              <fileset dir="${webappLocation}/WEB-INF/eclipse/features/gov.redhawk.entrypoint.scaExplorer.feature_1.9.0.${qualifier}/templates"/>
          </copy>
+         <copy todir="${webappLocation}/WEB-INF/lib">
+             <fileset file="${webappLocation}/WEB-INF/eclipse/plugins/org.eclipse.equinox.servletbridge_*.jar" />
+         </copy>
          <war destfile="${buildDirectory}/${buildLabel}/sca.war" webxml="${webappLocation}/WEB-INF/web.xml" basedir="${webappLocation}" includes="WEB-INF/eclipse/**, WEB-INF/web.xml">
              <lib dir="${webappLocation}/WEB-INF/lib" />
          </war>
     </target>
+
+
     <!-- ===================================================================== -->
     <!-- Steps to do to publish the build results -->
     <!-- ===================================================================== -->
     <target name="publish" depends="shouldPublish" if="p2.should.publish">
         <p2.mirror>
-            <source location="file:${buildDirectory}/${buildLabel}/p2/${projectName}.sdk"/>
+            <source location="file:${buildDirectory}/${buildLabel}/p2/${topLevelElementId}"/>
             <destination location="file:${publishBase}/${buildLabel}.${qualifier}"/>
             <iu query="property[@name='org.eclipse.equinox.p2.type.category']"/>
         </p2.mirror>
