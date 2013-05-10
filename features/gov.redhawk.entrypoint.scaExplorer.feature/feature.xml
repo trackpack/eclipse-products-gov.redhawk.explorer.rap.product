@@ -56,10 +56,6 @@
          version="0.0.0"/>
 
    <includes
-         id="gov.redhawk.sca.rap.sdk"
-         version="0.0.0"/>
-
-   <includes
          id="mil.jpeojtrs.sca.sdk"
          version="0.0.0"/>
 
@@ -80,10 +76,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.jacorb.systemFragment"
-         version="0.0.0"/>
-
-   <includes
          id="nxm"
          version="0.0.0"/>
 
@@ -93,6 +85,14 @@
 
    <includes
          id="org.eclipse.emf.transaction.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.rap.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.jacorb"
          version="0.0.0"/>
 
    <plugin
