@@ -22,6 +22,10 @@ public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "gov.redhawk.entrypoint.scaExplorer";
+	
+	public static String PROP_JACORB_ORB_CLASS = "org.omg.CORBA.ORBClass";
+	
+	public static String PROP_JACORB_ORB_SINGLETON_CLASS = "org.omg.CORBA.ORBSingletonClass";
 
 	// The shared instance
 	private static Activator plugin;

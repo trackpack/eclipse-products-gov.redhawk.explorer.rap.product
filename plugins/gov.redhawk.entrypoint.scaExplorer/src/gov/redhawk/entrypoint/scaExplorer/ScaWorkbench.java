@@ -20,6 +20,7 @@ import org.eclipse.rwt.lifecycle.IEntryPoint;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
+import org.osgi.framework.BundleContext;
 
 /**
  * This class controls all aspects of the application's execution
@@ -56,6 +57,11 @@ public class ScaWorkbench implements IEntryPoint {
 			// PASS
 		}
 		final Display display = PlatformUI.createDisplay();
+		BundleContext context = Activator.getDefault().getBundle().getBundleContext();
+		String orbClass = context.getProperty(Activator.PROP_JACORB_ORB_CLASS);
+		System.setProperty(Activator.PROP_JACORB_ORB_CLASS, orbClass);
+		String orbSingletonClass = context.getProperty(Activator.PROP_JACORB_ORB_SINGLETON_CLASS);
+		System.setProperty(Activator.PROP_JACORB_ORB_SINGLETON_CLASS, orbSingletonClass);
 		final int result = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
 		display.dispose();
 		return result;
