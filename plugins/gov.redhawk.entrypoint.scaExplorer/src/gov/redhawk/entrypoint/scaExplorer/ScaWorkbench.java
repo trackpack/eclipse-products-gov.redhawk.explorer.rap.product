@@ -57,11 +57,15 @@ public class ScaWorkbench implements IEntryPoint {
 			// PASS
 		}
 		final Display display = PlatformUI.createDisplay();
+		//Read properties from bundle context (set in launch.ini) and set corresponding system props
 		BundleContext context = Activator.getDefault().getBundle().getBundleContext();
 		String orbClass = context.getProperty(Activator.PROP_JACORB_ORB_CLASS);
 		System.setProperty(Activator.PROP_JACORB_ORB_CLASS, orbClass);
 		String orbSingletonClass = context.getProperty(Activator.PROP_JACORB_ORB_SINGLETON_CLASS);
 		System.setProperty(Activator.PROP_JACORB_ORB_SINGLETON_CLASS, orbSingletonClass);
+		String singleDomain = context.getProperty(Activator.PROP_SINGLE_DOMAIN);
+		System.setProperty(Activator.PROP_SINGLE_DOMAIN, singleDomain);
+		
 		final int result = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
 		display.dispose();
 		return result;

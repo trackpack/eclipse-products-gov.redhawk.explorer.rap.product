@@ -13,7 +13,8 @@ such as Tomcat:
 4. In the RAP application's EntryPoint implementation, before running the workbench, read the jacorb properties
     from the bundle context and set them as system properties
 5. Tomcat seems to run out of PermGen space soon after launching the SCA Explorer RAP with the default PermGen settings.
-   A setting of 256 MB seems to work adequately. You also need to tell Tomcat to prefer the IPv4 protocol stack.
-   To make these settings, define environment variable CATALINA_OPTS as indicated below in the file
-   $CATALINA_HOME/bin/setenv.sh (create it if it doesn't exist):
-   	export CATALINA_OPTS="-server -XX:PermSize=256m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true"
+   A setting of 256 MB seems to work adequately. You also need to tell Tomcat to prefer the IPv4 protocol stack, and set
+   some properties for logging and JACORB configuration.
+   To make these settings,copy the contents of root/setenv.sh in this project to
+   $CATALINA_HOME/bin/setenv.sh (create the file if it does not exist)
+6. For logging and JACORB configuration, copy the contents of root/configuration to $CATALINA_HOME/conf

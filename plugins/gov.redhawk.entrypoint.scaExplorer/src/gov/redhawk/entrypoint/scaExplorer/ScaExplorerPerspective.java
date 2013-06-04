@@ -26,8 +26,12 @@ import org.eclipse.ui.IPerspectiveFactory;
 public class ScaExplorerPerspective implements IPerspectiveFactory {
 
 	private static final String SCA_EXPLORER_VIEW_ID = "gov.redhawk.ui.sca_explorer";
+	
+	private static final String SCA_EXPLORER_SD_VIEW_ID = "gov.redhawk.ui.sca_explorer_sd";
 
 	private static final String NAMEBROWSER_VIEW_ID = "gov.redhawk.ui.views.namebrowserview";
+	
+	private static final String PROP_SINGLE_DOMAIN = "gov.redhawk.ui.singleDomain";
 
 	public void createInitialLayout(final IPageLayout layout) {
 		// Editors are placed for free.
@@ -35,7 +39,11 @@ public class ScaExplorerPerspective implements IPerspectiveFactory {
 
 		final IFolderLayout left = layout.createFolder("left", IPageLayout.LEFT, (float) 0.35, editorArea);
 
-		left.addView(ScaExplorerPerspective.SCA_EXPLORER_VIEW_ID);
+		if (System.getProperty(PROP_SINGLE_DOMAIN) == null) {
+			left.addView(ScaExplorerPerspective.SCA_EXPLORER_VIEW_ID);
+		} else {
+			left.addView(ScaExplorerPerspective.SCA_EXPLORER_SD_VIEW_ID);
+		}
 		left.addView(ScaExplorerPerspective.NAMEBROWSER_VIEW_ID);
 
 		final IFolderLayout bottom = layout.createFolder("bottom", IPageLayout.BOTTOM, (float) 0.60, editorArea);
