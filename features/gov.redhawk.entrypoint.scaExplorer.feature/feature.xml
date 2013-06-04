@@ -52,7 +52,7 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.edit"
+         id="org.eclipse.emf.rap.edit.ui"
          version="0.0.0"/>
 
    <includes
@@ -87,10 +87,6 @@
          id="org.eclipse.emf.rap.source"
          version="0.0.0"/>
 
-   <includes
-         id="org.jacorb.systemFragment"
-         version="0.0.0"/>
-
    <requires>
       <import plugin="org.eclipse.core.filesystem" version="1.1.0" match="compatible"/>
       <import plugin="org.eclipse.emf.edit" version="2.3.0" match="compatible"/>
@@ -123,6 +119,14 @@
 
    <includes
          id="org.eclipse.emf.transaction.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.rap.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.jacorb"
          version="0.0.0"/>
 
    <plugin
