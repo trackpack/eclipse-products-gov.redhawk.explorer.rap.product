@@ -20,6 +20,15 @@
             name="%perspective.name">
       </perspective>
    </extension>
+    <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="gov.redhawk.entrypoint.scaExplorer.ScaExplorerPerspectiveSingleDomain"
+            fixed="false"
+            id="gov.redhawk.product.sca_explorer.perspective_sd"
+            name="%perspective.name">
+      </perspective>
+   </extension>
    <extension
          point="org.eclipse.ui.activities">
       <activity

@@ -20,12 +20,6 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
 public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
-	private static final String PERSPECTIVE_ID = "gov.redhawk.product.sca_explorer.perspective";
-
-	private static final String PERSPECTIVE_ID_SD = "gov.redhawk.sca.ui.singledomain.perspective";
-
-	private static final String PROP_SINGLE_DOMAIN = "gov.redhawk.sca.singledomain";
-	
 	/**
 	 * We need to implement an appropriate adapter for RAP, for saving and restoring workbench resources.
 	 * The code below is used for the RCP app, but the implementation of <code>gov.redhawk.entrypoint.scaExplorer.internal.ResourceFactory</code>
@@ -88,10 +82,10 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
 	@Override
 	public String getInitialWindowPerspectiveId() {
-		if ("true".equalsIgnoreCase(System.getProperty(PROP_SINGLE_DOMAIN))) {
-			return ApplicationWorkbenchAdvisor.PERSPECTIVE_ID_SD;
+		if ("true".equalsIgnoreCase(System.getProperty(Activator.PROP_SINGLE_DOMAIN))) {
+			return ScaExplorerPerspectiveSingleDomain.PERSPECTIVE_ID;
 		} else {
-			return ApplicationWorkbenchAdvisor.PERSPECTIVE_ID;
+			return ScaExplorerPerspective.PERSPECTIVE_ID;
 		}
 	}
 
