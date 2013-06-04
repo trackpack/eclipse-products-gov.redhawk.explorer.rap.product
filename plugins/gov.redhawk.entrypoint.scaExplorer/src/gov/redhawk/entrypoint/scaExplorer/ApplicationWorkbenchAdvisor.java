@@ -88,8 +88,7 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
 	@Override
 	public String getInitialWindowPerspectiveId() {
-		if (System.getProperty(PROP_SINGLE_DOMAIN) != null) {
-		//if (Activator.getDefault().getBundle().getBundleContext().getProperty("osgi." + PROP_SINGLE_DOMAIN) != null) {
+		if ("true".equalsIgnoreCase(System.getProperty(PROP_SINGLE_DOMAIN))) {
 			return ApplicationWorkbenchAdvisor.PERSPECTIVE_ID_SD;
 		} else {
 			return ApplicationWorkbenchAdvisor.PERSPECTIVE_ID;
