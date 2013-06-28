@@ -25,8 +25,6 @@
       <plugin id="gov.redhawk.sca.waveform.controlpanel"/>
       <plugin id="gov.redhawk.sca.waveform.controlpanel.rap" fragment="true"/>
       <plugin id="gov.redhawk.ui.port"/>
-      <plugin id="gov.redhawk.ui.port.nxmplot"/>
-      <plugin id="gov.redhawk.ui.port.nxmplot.rap"/>
       <plugin id="gov.redhawk.ui.views.domainbrowser"/>
       <plugin id="gov.redhawk.ui.views.monitor"/>
       <plugin id="gov.redhawk.ui.views.namebrowser"/>
@@ -60,7 +58,6 @@
       <plugin id="nxm.dsp.linux.x86_64" fragment="true"/>
       <plugin id="nxm.hwc"/>
       <plugin id="nxm.rap"/>
-      <plugin id="nxm.rap.ui"/>
       <plugin id="nxm.redhawk"/>
       <plugin id="nxm.sys"/>
       <plugin id="nxm.sys.linux.x86_64" fragment="true"/>
@@ -159,8 +156,6 @@
       <plugin id="gov.redhawk.sca.util" autoStart="true" startLevel="0" />
       <plugin id="gov.redhawk.sca.waveform.controlpanel" autoStart="true" startLevel="0" />
       <plugin id="gov.redhawk.ui.port" autoStart="true" startLevel="0" />
-      <plugin id="gov.redhawk.ui.port.nxmplot" autoStart="true" startLevel="0" />
-      <plugin id="gov.redhawk.ui.port.nxmplot.rap" autoStart="true" startLevel="0" />
       <plugin id="gov.redhawk.ui.views.domainbrowser" autoStart="true" startLevel="0" />
       <plugin id="gov.redhawk.ui.views.monitor" autoStart="true" startLevel="0" />
       <plugin id="gov.redhawk.ui.views.namebrowser" autoStart="true" startLevel="0" />
@@ -193,7 +188,6 @@
       <plugin id="nxm.dsp" autoStart="true" startLevel="0" />
       <plugin id="nxm.hwc" autoStart="true" startLevel="0" />
       <plugin id="nxm.rap" autoStart="true" startLevel="0" />
-      <plugin id="nxm.rap.ui" autoStart="true" startLevel="0" />
       <plugin id="nxm.redhawk" autoStart="true" startLevel="0" />
       <plugin id="nxm.sys" autoStart="true" startLevel="0" />
       <plugin id="nxm.ucl" autoStart="true" startLevel="0" />
