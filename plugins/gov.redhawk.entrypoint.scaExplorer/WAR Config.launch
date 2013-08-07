@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.rap.ui.launch.RAPLauncher">
+<setAttribute key="additional_plugins"/>
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="askclear" value="false"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="false"/>
+<booleanAttribute key="clearws" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/WAR Config"/>
+<booleanAttribute key="default" value="true"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="4"/>
+<stringAttribute key="featureDefaultLocation" value="workspace"/>
+<stringAttribute key="featurePluginResolution" value="workspace"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true&#10;-Dorg.omg.CORBA.ORBClass=org.jacorb.orb.ORB&#10;-Dorg.omg.CORBA.ORBSingletonClass=org.jacorb.orb.ORBSingleton&#10;-Djava.net.preferIPv4Stack=true"/>
+<stringAttribute key="org.eclipse.rap.launch.browserMode" value="INTERNAL"/>
+<stringAttribute key="org.eclipse.rap.launch.contextpath" value=""/>
+<stringAttribute key="org.eclipse.rap.launch.dataLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.rap.ui.launch/WARConfig"/>
+<booleanAttribute key="org.eclipse.rap.launch.developmentMode" value="true"/>
+<stringAttribute key="org.eclipse.rap.launch.entryPoint" value=""/>
+<stringAttribute key="org.eclipse.rap.launch.libraryVariant" value="STANDARD"/>
+<booleanAttribute key="org.eclipse.rap.launch.openBrowser" value="true"/>
+<intAttribute key="org.eclipse.rap.launch.port" value="10080"/>
+<stringAttribute key="org.eclipse.rap.launch.servletName" value="explorer"/>
+<stringAttribute key="org.eclipse.rap.launch.servletPath" value="/explorer"/>
+<intAttribute key="org.eclipse.rap.launch.sessionTimeout" value="0"/>
+<booleanAttribute key="org.eclipse.rap.launch.terminatePrevious" value="true"/>
+<booleanAttribute key="org.eclipse.rap.launch.useDefaultDataLocation" value="true"/>
+<booleanAttribute key="org.eclipse.rap.launch.useManualContextPath" value="false"/>
+<booleanAttribute key="org.eclipse.rap.launch.useManualPort" value="false"/>
+<booleanAttribute key="org.eclipse.rap.launch.useSessionTimeout" value="false"/>
+<booleanAttribute key="pde.generated.config" value="true"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<setAttribute key="selected_features">
+<setEntry value="gov.redhawk.entrypoint.scaExplorer.feature:default"/>
+<setEntry value="gov.redhawk.rap.feature.source:default"/>
+<setEntry value="gov.redhawk.rap.feature:default"/>
+<setEntry value="gov.redhawk.rap.sdk:default"/>
+<setEntry value="mil.jpeojtrs.sca.feature.source:default"/>
+<setEntry value="mil.jpeojtrs.sca.feature:default"/>
+<setEntry value="mil.jpeojtrs.sca.sdk:default"/>
+<setEntry value="nxm.rap.ui.sdk:default"/>
+<setEntry value="nxm.rap.ui.source:default"/>
+<setEntry value="nxm.rap.ui:default"/>
+<setEntry value="nxm:default"/>
+<setEntry value="org.eclipse.emf.common:default"/>
+<setEntry value="org.eclipse.emf.ecore.edit:default"/>
+<setEntry value="org.eclipse.emf.ecore:default"/>
+<setEntry value="org.eclipse.emf.edit:default"/>
+<setEntry value="org.eclipse.emf.rap.common.ui:default"/>
+<setEntry value="org.eclipse.emf.rap.edit.ui:default"/>
+<setEntry value="org.eclipse.emf.rap:default"/>
+<setEntry value="org.eclipse.emf.transaction.ui:default"/>
+<setEntry value="org.eclipse.rap.cnf.feature:default"/>
+<setEntry value="org.eclipse.rap.runtime.requirements:default"/>
+<setEntry value="org.eclipse.rap.runtime:default"/>
+<setEntry value="org.eclipse.rap.tabbed-properties.feature:default"/>
+<setEntry value="org.jacorb:default"/>
+</setAttribute>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="target_bundles" value="com.ibm.icu@default:default,gov.redhawk.common.ui@default:default,gov.redhawk.sca.efs@default:default,gov.redhawk.sca.model.edit@default:default,gov.redhawk.sca.model.provider.event@default:default,gov.redhawk.sca.model.provider.refresh.ui@default:default,gov.redhawk.sca.model.provider.refresh@default:default,gov.redhawk.sca.model@default:default,gov.redhawk.sca.observables@default:default,gov.redhawk.sca.ui.singledomain@default:default,gov.redhawk.sca.ui@default:default,gov.redhawk.sca.util@default:default,gov.redhawk.sca.waveform.controlpanel@default:default,gov.redhawk.sca@default:default,gov.redhawk.ui.port.nxmplot@default:default,gov.redhawk.ui.port@default:default,gov.redhawk.ui.views.monitor@default:default,gov.redhawk.ui.views.namebrowser@default:default,gov.redhawk.ui.waveformviewer@default:default,idl.bulkio@default:default,idl.cf@default:default,javax.servlet@default:default,javax.xml@default:default,mil.jpeojtrs.sca.cf.edit@default:default,mil.jpeojtrs.sca.cf@default:default,mil.jpeojtrs.sca.dcd.edit@default:default,mil.jpeojtrs.sca.dcd@default:default,mil.jpeojtrs.sca.dmd.edit@default:default,mil.jpeojtrs.sca.dmd@default:default,mil.jpeojtrs.sca.dpd.edit@default:default,mil.jpeojtrs.sca.dpd@default:default,mil.jpeojtrs.sca.partitioning.edit@default:default,mil.jpeojtrs.sca.partitioning@default:default,mil.jpeojtrs.sca.prf.edit@default:default,mil.jpeojtrs.sca.prf@default:default,mil.jpeojtrs.sca.profile.edit@default:default,mil.jpeojtrs.sca.profile@default:default,mil.jpeojtrs.sca.sad.edit@default:default,mil.jpeojtrs.sca.sad@default:default,mil.jpeojtrs.sca.scd.edit@default:default,mil.jpeojtrs.sca.scd@default:default,mil.jpeojtrs.sca.spd.edit@default:default,mil.jpeojtrs.sca.spd@default:default,mil.jpeojtrs.sca.util@default:default,mil.jpeojtrs.sca.validator@default:default,nxm.dsp.linux.x86_64@default:false,nxm.dsp@default:default,nxm.hwc@default:default,nxm.redhawk@default:default,nxm.sys.linux.x86_64@default:false,nxm.sys@default:default,nxm.ucl@default:default,org.apache.commons.io@default:default,org.apache.commons.lang@default:default,org.apache.log4j@default:default,org.eclipse.core.commands@default:default,org.eclipse.core.contenttype@default:default,org.eclipse.core.databinding.beans@default:default,org.eclipse.core.databinding.observable@default:default,org.eclipse.core.databinding.property@default:default,org.eclipse.core.databinding@default:default,org.eclipse.core.expressions@default:default,org.eclipse.core.filesystem@default:default,org.eclipse.core.jobs@default:default,org.eclipse.core.resources@default:default,org.eclipse.core.runtime@default:true,org.eclipse.emf.common@default:default,org.eclipse.emf.databinding.edit@default:default,org.eclipse.emf.databinding@default:default,org.eclipse.emf.ecore.change.edit@default:default,org.eclipse.emf.ecore.change@default:default,org.eclipse.emf.ecore.edit@default:default,org.eclipse.emf.ecore.xmi@default:default,org.eclipse.emf.ecore@default:default,org.eclipse.emf.edit@default:default,org.eclipse.emf.mapping.ecore2xml@default:default,org.eclipse.emf.transaction.ui@default:default,org.eclipse.emf.transaction@default:default,org.eclipse.emf.validation@default:default,org.eclipse.emf.workspace@default:default,org.eclipse.equinox.app@default:default,org.eclipse.equinox.common@2:true,org.eclipse.equinox.ds@1:true,org.eclipse.equinox.http.registry@default:default,org.eclipse.equinox.http.servlet@default:default,org.eclipse.equinox.preferences@default:default,org.eclipse.equinox.registry@default:default,org.eclipse.equinox.util@default:default,org.eclipse.help@default:default,org.eclipse.jdt.junit.runtime@default:default,org.eclipse.osgi.services@default:default,org.eclipse.osgi@-1:true,org.jacorb@default:default,org.junit*3.8.2.v3_8_2_v20100427-1100@default:default,org.junit*4.8.1.v4_8_1_v20100427-1100@default:default,org.omg.cos@default:default"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<stringAttribute key="workspace_bundles" value="gov.redhawk.entrypoint.scaExplorer@default:default,gov.redhawk.sca.ui.singledomain@default:default,gov.redhawk.sca.ui@default:default,nxm.redhawk@default:default"/>
+</launchConfiguration>
