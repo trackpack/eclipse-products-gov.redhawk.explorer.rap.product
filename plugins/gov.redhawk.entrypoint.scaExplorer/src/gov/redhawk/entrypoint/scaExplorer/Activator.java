@@ -24,6 +24,8 @@ public class Activator extends AbstractUIPlugin {
 	public static final String PLUGIN_ID = "gov.redhawk.entrypoint.scaExplorer";
 
 	public static final String PROP_SINGLE_DOMAIN = "gov.redhawk.ui.singleDomain";
+
+	public static final String PROP_SHARED_DOMAINS = "gov.redhawk.sca.sharedDomains";
 	
 	public static String PROP_JACORB_ORB_CLASS = "org.omg.CORBA.ORBClass";
 	

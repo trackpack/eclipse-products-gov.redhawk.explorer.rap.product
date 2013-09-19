@@ -71,7 +71,10 @@ public class ScaWorkbench implements IEntryPoint {
 		if (singleDomain != null) {
 			System.setProperty(Activator.PROP_SINGLE_DOMAIN, singleDomain);
 		}
-
+		String sharedDomains = context.getProperty(Activator.PROP_SHARED_DOMAINS);
+		if (sharedDomains != null) {
+			System.setProperty(Activator.PROP_SHARED_DOMAINS, sharedDomains);
+		}
 		final int result = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
 		display.dispose();
 		return result;
