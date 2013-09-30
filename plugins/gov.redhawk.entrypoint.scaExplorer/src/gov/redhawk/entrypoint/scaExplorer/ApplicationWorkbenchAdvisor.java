@@ -82,7 +82,7 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
 	@Override
 	public String getInitialWindowPerspectiveId() {
-		if ("true".equalsIgnoreCase(System.getProperty(Activator.PROP_SINGLE_DOMAIN))) {
+		if ("true".equalsIgnoreCase(System.getProperty(EntrypointActivator.PROP_SINGLE_DOMAIN))) {
 			return ScaExplorerPerspectiveSingleDomain.PERSPECTIVE_ID;
 		} else {
 			return ScaExplorerPerspective.PERSPECTIVE_ID;

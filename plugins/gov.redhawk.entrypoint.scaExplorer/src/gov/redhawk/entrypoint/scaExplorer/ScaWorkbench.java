@@ -50,7 +50,7 @@ public class ScaWorkbench implements IEntryPoint {
 
 	public int createUI() {
 		try {
-			LogManager.getLogManager().readConfiguration(FileLocator.openStream(Activator.getDefault().getBundle(), new Path("javalogger.properties"), false));
+			LogManager.getLogManager().readConfiguration(FileLocator.openStream(EntrypointActivator.getDefault().getBundle(), new Path("javalogger.properties"), false));
 		} catch (final SecurityException e) {
 			// PASS
 		} catch (final IOException e) {
@@ -58,22 +58,22 @@ public class ScaWorkbench implements IEntryPoint {
 		}
 		final Display display = PlatformUI.createDisplay();
 		//Read properties from bundle context (set in launch.ini) and set corresponding system props
-		BundleContext context = Activator.getDefault().getBundle().getBundleContext();
-		String orbClass = context.getProperty(Activator.PROP_JACORB_ORB_CLASS);
+		BundleContext context = EntrypointActivator.getDefault().getBundle().getBundleContext();
+		String orbClass = context.getProperty(EntrypointActivator.PROP_JACORB_ORB_CLASS);
 		if (orbClass != null) {
-			System.setProperty(Activator.PROP_JACORB_ORB_CLASS, orbClass);
+			System.setProperty(EntrypointActivator.PROP_JACORB_ORB_CLASS, orbClass);
 		}
-		String orbSingletonClass = context.getProperty(Activator.PROP_JACORB_ORB_SINGLETON_CLASS);
+		String orbSingletonClass = context.getProperty(EntrypointActivator.PROP_JACORB_ORB_SINGLETON_CLASS);
 		if (orbSingletonClass != null) {
-			System.setProperty(Activator.PROP_JACORB_ORB_SINGLETON_CLASS, orbSingletonClass);
+			System.setProperty(EntrypointActivator.PROP_JACORB_ORB_SINGLETON_CLASS, orbSingletonClass);
 		}
-		String singleDomain = context.getProperty(Activator.PROP_SINGLE_DOMAIN);
+		String singleDomain = context.getProperty(EntrypointActivator.PROP_SINGLE_DOMAIN);
 		if (singleDomain != null) {
-			System.setProperty(Activator.PROP_SINGLE_DOMAIN, singleDomain);
+			System.setProperty(EntrypointActivator.PROP_SINGLE_DOMAIN, singleDomain);
 		}
-		String sharedDomains = context.getProperty(Activator.PROP_SHARED_DOMAINS);
+		String sharedDomains = context.getProperty(EntrypointActivator.PROP_SHARED_DOMAINS);
 		if (sharedDomains != null) {
-			System.setProperty(Activator.PROP_SHARED_DOMAINS, sharedDomains);
+			System.setProperty(EntrypointActivator.PROP_SHARED_DOMAINS, sharedDomains);
 		}
 		final int result = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
 		display.dispose();

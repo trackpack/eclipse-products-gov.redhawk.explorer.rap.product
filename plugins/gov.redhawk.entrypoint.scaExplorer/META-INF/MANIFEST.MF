@@ -10,5 +10,5 @@ Require-Bundle: org.eclipse.rap.ui;bundle-version="1.3.1",
 Export-Package: gov.redhawk.entrypoint.scaExplorer
 Import-Package: javax.servlet;version="2.5.0",
  javax.servlet.http;version="2.5.0"
-Bundle-Activator: gov.redhawk.entrypoint.scaExplorer.Activator
+Bundle-Activator: gov.redhawk.entrypoint.scaExplorer.EntrypointActivator
 Bundle-ActivationPolicy: lazy
