@@ -11,6 +11,8 @@
  */
 package gov.redhawk.entrypoint.scaExplorer;
 
+import gov.redhawk.sca.ui.ScaUiPlugin;
+
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IAdaptable;
@@ -83,6 +85,9 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
 	@Override
 	public String getInitialWindowPerspectiveId() {
+		if (Boolean.valueOf(System.getProperty(ScaUiPlugin.PROP_SINGLE_DOMAIN))) {
+			return ScaExplorerSingleDomainPerspective.PERSPECTIVE_ID;
+		}
 		return ScaExplorerPerspective.PERSPECTIVE_ID;
 	}
 

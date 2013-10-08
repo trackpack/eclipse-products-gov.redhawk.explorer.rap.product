@@ -7,7 +7,6 @@
  * All rights reserved.  This program and the accompanying materials are made available under 
  * the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html.
- *
  */
 package gov.redhawk.entrypoint.scaExplorer;
 
@@ -23,21 +22,21 @@ import org.eclipse.ui.IPerspectiveFactory;
  * this prevents users from maximizing views and such. Instead, all of the views
  * should be set to not be closeable.
  */
-public class ScaExplorerPerspective implements IPerspectiveFactory {
-
-	public static final String SCA_EXPLORER_VIEW_ID = "gov.redhawk.ui.sca_explorer";
+public class ScaExplorerSingleDomainPerspective implements IPerspectiveFactory {
+	
+	public static final String SCA_EXPLORER_SD_VIEW_ID = "gov.redhawk.ui.sca_explorer_sd";
 
 	private static final String NAMEBROWSER_VIEW_ID = "gov.redhawk.ui.views.namebrowserview";
 
-	public static final String PERSPECTIVE_ID = "gov.redhawk.product.sca_explorer.perspective";
+	public static final String PERSPECTIVE_ID = "gov.redhawk.product.sca_explorer_sd.perspective";
 
 	public void createInitialLayout(final IPageLayout layout) {
 		// Editors are placed for free.
 		final String editorArea = layout.getEditorArea();
 
 		final IFolderLayout left = layout.createFolder("left", IPageLayout.LEFT, (float) 0.35, editorArea);
-		left.addView(ScaExplorerPerspective.SCA_EXPLORER_VIEW_ID);
-		left.addView(ScaExplorerPerspective.NAMEBROWSER_VIEW_ID);
+		left.addView(ScaExplorerSingleDomainPerspective.SCA_EXPLORER_SD_VIEW_ID);
+		left.addView(ScaExplorerSingleDomainPerspective.NAMEBROWSER_VIEW_ID);
 
 		final IFolderLayout bottom = layout.createFolder("bottom", IPageLayout.BOTTOM, (float) 0.60, editorArea);
 
@@ -47,12 +46,12 @@ public class ScaExplorerPerspective implements IPerspectiveFactory {
 		// TO BE MAXIMIZED/MINIMIZED.
 
 		// These are so important, don't let the operator close them.
-		layout.getViewLayout(ScaExplorerPerspective.SCA_EXPLORER_VIEW_ID).setCloseable(false);
-		layout.getViewLayout(ScaExplorerPerspective.NAMEBROWSER_VIEW_ID).setCloseable(false);
+		layout.getViewLayout(ScaExplorerSingleDomainPerspective.SCA_EXPLORER_SD_VIEW_ID).setCloseable(false);
+		layout.getViewLayout(ScaExplorerSingleDomainPerspective.NAMEBROWSER_VIEW_ID).setCloseable(false);
 		layout.getViewLayout(IPageLayout.ID_PROP_SHEET).setCloseable(false);
 		// Don't let anything move
-		layout.getViewLayout(ScaExplorerPerspective.SCA_EXPLORER_VIEW_ID).setMoveable(false);
-		layout.getViewLayout(ScaExplorerPerspective.NAMEBROWSER_VIEW_ID).setMoveable(false);
+		layout.getViewLayout(ScaExplorerSingleDomainPerspective.SCA_EXPLORER_SD_VIEW_ID).setMoveable(false);
+		layout.getViewLayout(ScaExplorerSingleDomainPerspective.NAMEBROWSER_VIEW_ID).setMoveable(false);
 		layout.getViewLayout(IPageLayout.ID_PROP_SHEET).setMoveable(false);
 	}
 }
