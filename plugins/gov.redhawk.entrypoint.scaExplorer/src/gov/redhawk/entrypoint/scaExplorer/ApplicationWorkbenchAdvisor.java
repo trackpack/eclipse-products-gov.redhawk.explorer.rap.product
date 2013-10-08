@@ -1,14 +1,16 @@
 /**
- * This file is protected by Copyright. 
- * Please refer to the COPYRIGHT file distributed with this source distribution.
- * 
- * This file is part of REDHAWK IDE.
- * 
- * All rights reserved.  This program and the accompanying materials are made available under 
- * the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html.
+ * This file is protected by Copyright. 
+ * Please refer to the COPYRIGHT file distributed with this source distribution.
+ * 
+ * This file is part of REDHAWK IDE.
+ * 
+ * All rights reserved.  This program and the accompanying materials are made available under 
+ * the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html.
  */
 package gov.redhawk.entrypoint.scaExplorer;
+
+import gov.redhawk.sca.ui.ScaUiPlugin;
 
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -82,11 +84,10 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
 	@Override
 	public String getInitialWindowPerspectiveId() {
-		if ("true".equalsIgnoreCase(System.getProperty(Activator.PROP_SINGLE_DOMAIN))) {
-			return ScaExplorerPerspectiveSingleDomain.PERSPECTIVE_ID;
-		} else {
-			return ScaExplorerPerspective.PERSPECTIVE_ID;
+		if (Boolean.valueOf(System.getProperty(ScaUiPlugin.PROP_SINGLE_DOMAIN))) {
+			return ScaExplorerSingleDomainPerspective.PERSPECTIVE_ID;
 		}
+		return ScaExplorerPerspective.PERSPECTIVE_ID;
 	}
 
 	@Override

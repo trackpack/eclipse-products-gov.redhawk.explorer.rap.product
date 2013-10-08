@@ -1,13 +1,12 @@
 /**
- * This file is protected by Copyright. 
- * Please refer to the COPYRIGHT file distributed with this source distribution.
- * 
- * This file is part of REDHAWK IDE.
- * 
- * All rights reserved.  This program and the accompanying materials are made available under 
- * the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html.
- *
+ * This file is protected by Copyright. 
+ * Please refer to the COPYRIGHT file distributed with this source distribution.
+ * 
+ * This file is part of REDHAWK IDE.
+ * 
+ * All rights reserved.  This program and the accompanying materials are made available under 
+ * the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html.
  */
 package gov.redhawk.entrypoint.scaExplorer;
 
@@ -18,24 +17,22 @@ import org.osgi.framework.BundleContext;
 /**
  * The activator class controls the plug-in life cycle
  */
-public class Activator extends AbstractUIPlugin {
+public class EntrypointActivator extends AbstractUIPlugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "gov.redhawk.entrypoint.scaExplorer";
-
-	public static final String PROP_SINGLE_DOMAIN = "gov.redhawk.ui.singleDomain";
 	
-	public static String PROP_JACORB_ORB_CLASS = "org.omg.CORBA.ORBClass";
+	public static final String PROP_JACORB_ORB_CLASS = "org.omg.CORBA.ORBClass";
 	
-	public static String PROP_JACORB_ORB_SINGLETON_CLASS = "org.omg.CORBA.ORBSingletonClass";
+	public static final String PROP_JACORB_ORB_SINGLETON_CLASS = "org.omg.CORBA.ORBSingletonClass";
 
 	// The shared instance
-	private static Activator plugin;
+	private static EntrypointActivator plugin;
 
 	/**
 	 * The constructor
 	 */
-	public Activator() {
+	public EntrypointActivator() {
 	}
 
 	/*
@@ -47,7 +44,7 @@ public class Activator extends AbstractUIPlugin {
 	@Override
 	public void start(final BundleContext context) throws Exception {
 		super.start(context);
-		Activator.plugin = this;
+		EntrypointActivator.plugin = this;
 	}
 
 	/*
@@ -58,7 +55,7 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	@Override
 	public void stop(final BundleContext context) throws Exception {
-		Activator.plugin = null;
+		EntrypointActivator.plugin = null;
 		super.stop(context);
 	}
 
@@ -67,8 +64,8 @@ public class Activator extends AbstractUIPlugin {
 	 * 
 	 * @return the shared instance
 	 */
-	public static Activator getDefault() {
-		return Activator.plugin;
+	public static EntrypointActivator getDefault() {
+		return EntrypointActivator.plugin;
 	}
 
 	/**
@@ -79,6 +76,6 @@ public class Activator extends AbstractUIPlugin {
 	 * @return the image descriptor
 	 */
 	public static ImageDescriptor getImageDescriptor(final String path) {
-		return AbstractUIPlugin.imageDescriptorFromPlugin(Activator.PLUGIN_ID, path);
+		return AbstractUIPlugin.imageDescriptorFromPlugin(EntrypointActivator.PLUGIN_ID, path);
 	}
 }

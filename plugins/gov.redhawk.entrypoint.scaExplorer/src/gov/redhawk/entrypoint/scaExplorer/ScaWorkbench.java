@@ -1,15 +1,17 @@
 /**
- * This file is protected by Copyright. 
- * Please refer to the COPYRIGHT file distributed with this source distribution.
- * 
- * This file is part of REDHAWK IDE.
- * 
- * All rights reserved.  This program and the accompanying materials are made available under 
- * the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html.
- *
+ * This file is protected by Copyright. 
+ * Please refer to the COPYRIGHT file distributed with this source distribution.
+ * 
+ * This file is part of REDHAWK IDE.
+ * 
+ * All rights reserved.  This program and the accompanying materials are made available under 
+ * the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html.
  */
 package gov.redhawk.entrypoint.scaExplorer;
+
+import gov.redhawk.sca.rap.ScaRapPlugin;
+import gov.redhawk.sca.ui.ScaUiPlugin;
 
 import java.io.IOException;
 import java.util.logging.LogManager;
@@ -50,7 +52,7 @@ public class ScaWorkbench implements IEntryPoint {
 
 	public int createUI() {
 		try {
-			LogManager.getLogManager().readConfiguration(FileLocator.openStream(Activator.getDefault().getBundle(), new Path("javalogger.properties"), false));
+			LogManager.getLogManager().readConfiguration(FileLocator.openStream(EntrypointActivator.getDefault().getBundle(), new Path("javalogger.properties"), false));
 		} catch (final SecurityException e) {
 			// PASS
 		} catch (final IOException e) {
@@ -58,20 +60,23 @@ public class ScaWorkbench implements IEntryPoint {
 		}
 		final Display display = PlatformUI.createDisplay();
 		//Read properties from bundle context (set in launch.ini) and set corresponding system props
-		BundleContext context = Activator.getDefault().getBundle().getBundleContext();
-		String orbClass = context.getProperty(Activator.PROP_JACORB_ORB_CLASS);
+		BundleContext context = EntrypointActivator.getDefault().getBundle().getBundleContext();
+		String orbClass = context.getProperty(EntrypointActivator.PROP_JACORB_ORB_CLASS);
 		if (orbClass != null) {
-			System.setProperty(Activator.PROP_JACORB_ORB_CLASS, orbClass);
+			System.setProperty(EntrypointActivator.PROP_JACORB_ORB_CLASS, orbClass);
 		}
-		String orbSingletonClass = context.getProperty(Activator.PROP_JACORB_ORB_SINGLETON_CLASS);
+		String orbSingletonClass = context.getProperty(EntrypointActivator.PROP_JACORB_ORB_SINGLETON_CLASS);
 		if (orbSingletonClass != null) {
-			System.setProperty(Activator.PROP_JACORB_ORB_SINGLETON_CLASS, orbSingletonClass);
+			System.setProperty(EntrypointActivator.PROP_JACORB_ORB_SINGLETON_CLASS, orbSingletonClass);
 		}
-		String singleDomain = context.getProperty(Activator.PROP_SINGLE_DOMAIN);
+		String singleDomain = context.getProperty(ScaUiPlugin.PROP_SINGLE_DOMAIN);
 		if (singleDomain != null) {
-			System.setProperty(Activator.PROP_SINGLE_DOMAIN, singleDomain);
+			System.setProperty(ScaUiPlugin.PROP_SINGLE_DOMAIN, singleDomain);
 		}
-
+		String sharedDomains = context.getProperty(ScaRapPlugin.PROP_SHARED_DOMAINS);
+		if (sharedDomains != null) {
+			System.setProperty(ScaRapPlugin.PROP_SHARED_DOMAINS, sharedDomains);
+		}
 		final int result = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
 		display.dispose();
 		return result;

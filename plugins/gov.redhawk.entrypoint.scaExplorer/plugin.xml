@@ -20,13 +20,12 @@
             name="%perspective.name">
       </perspective>
    </extension>
-    <extension
+   <extension
          point="org.eclipse.ui.perspectives">
       <perspective
-            class="gov.redhawk.entrypoint.scaExplorer.ScaExplorerPerspectiveSingleDomain"
-            fixed="false"
-            id="gov.redhawk.product.sca_explorer.perspective_sd"
-            name="%perspective.name">
+            class="gov.redhawk.entrypoint.scaExplorer.ScaExplorerSingleDomainPerspective"
+            id="gov.redhawk.product.sca_explorer_sd.perspective"
+            name="SCA Explorer (Single Domain)">
       </perspective>
    </extension>
    <extension
