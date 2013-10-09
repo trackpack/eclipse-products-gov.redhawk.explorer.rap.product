@@ -15,8 +15,6 @@ import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.WorkbenchException;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
