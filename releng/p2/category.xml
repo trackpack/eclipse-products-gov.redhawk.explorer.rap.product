@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/gov.redhawk.entrypoint.scaExplorer.feature_1.10.0.qualifier.jar" id="gov.redhawk.entrypoint.scaExplorer.feature" version="1.10.0.qualifier">
+      <category name="gov.redhawk"/>
+   </feature>
+   <category-def name="gov.redhawk" label="REDHAWK"/>
+</site>

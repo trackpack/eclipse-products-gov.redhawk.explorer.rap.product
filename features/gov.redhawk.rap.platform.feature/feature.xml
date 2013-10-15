@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="gov.redhawk.rap.platform"
+      label="Platform"
+      version="1.0.0.qualifier">
+
+   <includes
+         id="org.eclipse.equinox.server.core"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.server.jetty"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.server.p2"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.server.servletbridge"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.core.runtime.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.common"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.rap"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.rap.common.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.rap.edit.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="mil.jpeojtrs.sca.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rap.runtime"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rap.runtime.requirements"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rap.cnf.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rap.tabbed-properties.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="gov.redhawk.rap.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="nxm"
+         version="0.0.0"/>
+
+   <includes
+         id="nxm.rap.ui.sdk"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.transaction.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.jacorb"
+         version="0.0.0"/>
+
+</feature>

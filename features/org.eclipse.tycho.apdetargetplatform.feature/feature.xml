@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.tycho.apdetargetplatform.feature"
+      label="A PDE Target Platform"
+      version="1.0.0.qualifier">
+
+   <description url="http://www.example.com/description">
+      Empty feture augmented with a p2.inf to be able to use the RAP and other runtimes in .target
+file in Tycho.
+Indeed due to the RAP Hack &quot;A.PDE.Target.Platform Cannot be installed
+into the IDE [0.0.0]&quot; Tycho is not able to create the target
+platform from the .target because of the lacking A.PDE.Target.Platform
+dependency.
+See the following links for more information
+- http://www.eclipse.org/forums/index.php?t=msg&amp;goto=635186&amp;S=02fccd32953bc10f6ffa718b48468225
+- https://issues.sonatype.org/browse/TYCHO-477
+- https://bugs.eclipse.org/bugs/show_bug.cgi?id=342808
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+</feature>
