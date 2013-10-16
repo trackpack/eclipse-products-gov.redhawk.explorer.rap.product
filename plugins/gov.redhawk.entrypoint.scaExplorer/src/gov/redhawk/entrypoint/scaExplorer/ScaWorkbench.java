@@ -10,7 +10,6 @@
  */
 package gov.redhawk.entrypoint.scaExplorer;
 
-import gov.redhawk.sca.rap.ScaRapPlugin;
 import gov.redhawk.sca.ui.ScaUiPlugin;
 
 import java.io.IOException;
@@ -72,10 +71,6 @@ public class ScaWorkbench implements IEntryPoint {
 		String singleDomain = context.getProperty(ScaUiPlugin.PROP_SINGLE_DOMAIN);
 		if (singleDomain != null) {
 			System.setProperty(ScaUiPlugin.PROP_SINGLE_DOMAIN, singleDomain);
-		}
-		String sharedDomains = context.getProperty(ScaRapPlugin.PROP_SHARED_DOMAINS);
-		if (sharedDomains != null) {
-			System.setProperty(ScaRapPlugin.PROP_SHARED_DOMAINS, sharedDomains);
 		}
 		final int result = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
 		display.dispose();
