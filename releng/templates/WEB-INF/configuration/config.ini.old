@@ -1,0 +1,11 @@
+#This configuration file was written by: org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxFwConfigFileParser
+#Wed Oct 16 10:33:12 EDT 2013
+eclipse.p2.profile=DefaultProfile
+osgi.framework=file\:plugins/org.eclipse.osgi_3.8.2.v20130124-134944.jar
+equinox.use.ds=true
+osgi.bundles=reference\:file\:org.eclipse.equinox.simpleconfigurator_1.0.301.v20120914-163612.jar@1\:start
+org.eclipse.equinox.simpleconfigurator.configUrl=file\:org.eclipse.equinox.simpleconfigurator/bundles.info
+eclipse.product=org.eclipse.equinox.servletbridge.milli
+osgi.framework.extensions=reference\:file\:org.eclipse.equinox.servletbridge.extensionbundle_1.2.100.v20120522-2049.jar,reference\:file\:org.jacorb.systemFragment_3.1.0.201304242232.jar
+eclipse.p2.data.area=@config.dir/../p2
+osgi.bundles.defaultStartLevel=4
