@@ -29,6 +29,7 @@
     <rap-cnf>http://download.eclipse.org/rt/rap/incubator/nightly/cnf/</rap-cnf>
     <rap-tab>http://download.eclipse.org/rt/rap/incubator/nightly/tabbed-properties/</rap-tab>
     <org.eclipse.emf.transaction.ui>http://download.redhawksdr.org/org.eclipse.emf.transaction.ui/</org.eclipse.emf.transaction.ui>
+    <tycho-groupid>org.eclipse.tycho</tycho-groupid>
   </properties>
 
   <repositories>
