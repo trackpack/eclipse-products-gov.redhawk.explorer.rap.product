@@ -75,7 +75,6 @@
 									<excludes>
 										<exclude>content.jar</exclude>
 										<exclude>artifacts.jar</exclude>
-										<exclude>*/javax.servlet*</exclude>
 									</excludes>
 								</resource>
 							</resources>
