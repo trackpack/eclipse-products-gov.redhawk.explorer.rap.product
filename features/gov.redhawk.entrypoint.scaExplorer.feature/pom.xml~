@@ -16,7 +16,7 @@
   <packaging>eclipse-feature</packaging>
 
   <properties>
-  	<output-directory>${basedir}/target/WEB-INF</output-directory>
+  	<output-directory>${basedir}/../../releng/target/WEB-INF</output-directory>
   </properties>
  
   <build>
@@ -35,8 +35,8 @@
 			<version>2.4.3</version>
 			<executions>
 				<execution>
-					<id>copy-web-inf</id>
-					<phase>package</phase>
+					<id>copy-plugins</id>
+					<phase>deploy</phase>
 					<goals>
 						<goal>copy-resources</goal>
 					</goals>
@@ -44,43 +44,31 @@
 						<outputDirectory>${output-directory}</outputDirectory>
 						<resources>
 							<resource>
-								<directory>${basedir}/../../releng/templates/WEB-INF</directory>
+								<directory>${basedir}/target/site</directory>
 								<includes>
-									<include>**</include>
+									<include>*/**</include>
 								</includes>
+								<excludes>
+									<exclude>content.jar</exclude>
+									<exclude>artifacts.jar</exclude>
+								</excludes>
 							</resource>
+<!--
+							<resource>
+								<directory>${basedir}/../../releng/product/target/repository</directory>
+								<includes>
+									<include>*/**</include>
+								</includes>
+								<excludes>
+									<exclude>content.jar</exclude>
+									<exclude>artifacts.jar</exclude>
+								</excludes>
+							</resource>
+-->
 						</resources>
 					</configuration>
-					</execution>
-					<execution>
-						<id>copy-plugins</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${output-directory}</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${basedir}/../../features/gov.redhawk.entrypoint.scaExplorer.feature/target/site</directory>
-									<includes>
-										<include>*/**</include>
-									</includes>
-								</resource>
-								<resource>
-									<directory>${basedir}/../../features/gov.redhawk.rap.platform.feature/target/site</directory>
-									<includes>
-										<include>*/**</include>
-									</includes>
-									<excludes>
-										<exclude>content.jar</exclude>
-										<exclude>artifacts.jar</exclude>
-									</excludes>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
+				</execution>
+			</executions>
 		</plugin>
 
 		<plugin>
@@ -96,7 +84,7 @@
 			<executions>
 				<execution>
 					<id>make-assembly</id>
-					<phase>verify</phase>
+					<phase>deploy</phase>
 					<goals>
 						<goal>single</goal>
 					</goals>
