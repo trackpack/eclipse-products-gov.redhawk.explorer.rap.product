@@ -45,9 +45,16 @@
 									<exclude>web.xml</exclude>
 								</excludes>
 							</resource>
+							<resource>
+								<directory>${basedir}/rootfiles</directory>
+								<includes>
+									<include>web.xml</include>
+								</includes>
+							</resource>
 						</resources>
 					</configuration>
 					</execution>
+<!--
 				<execution>
 					<id>copy-plugins</id>
 					<phase>install</phase>
@@ -69,13 +76,8 @@
 									<exclude>*/web.xml</exclude>
 								</excludes>
 							</resource>
-							<resource>
-								<directory>${basedir}/rootfiles</directory>
-								<includes>
-									<include>web.xml</include>
-								</includes>
-							</resource>
-<!--
+							
+
 							<resource>
 								<directory>${basedir}/../../releng/product/target/repository</directory>
 								<includes>
@@ -86,10 +88,11 @@
 									<exclude>artifacts.jar</exclude>
 								</excludes>
 							</resource>
--->
+
 						</resources>
 					</configuration>
 				</execution>
+-->
 			</executions>
 		</plugin>
 	</plugins>
