@@ -7,6 +7,7 @@
  * All rights reserved.  This program and the accompanying materials are made available under 
  * the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html.
+ *
  */
 package gov.redhawk.entrypoint.scaExplorer;
 
@@ -24,6 +25,10 @@ public class EntrypointActivator extends AbstractUIPlugin {
 	
 	public static final String PROP_JACORB_ORB_CLASS = "org.omg.CORBA.ORBClass";
 	
+	public static final String PROP_SINGLE_DOMAIN = "gov.redhawk.ui.singleDomain";
+
+	public static final String PROP_JACORB_ORB_CLASS = "org.omg.CORBA.ORBClass";
+
 	public static final String PROP_JACORB_ORB_SINGLETON_CLASS = "org.omg.CORBA.ORBSingletonClass";
 
 	// The shared instance
