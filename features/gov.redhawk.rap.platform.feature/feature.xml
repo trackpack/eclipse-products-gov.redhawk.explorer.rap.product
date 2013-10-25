@@ -92,4 +92,8 @@
          id="org.jacorb"
          version="0.0.0"/>
 
+   <includes
+         id="gov.redhawk.core.sdk"
+         version="0.0.0"/>
+
 </feature>
