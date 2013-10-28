@@ -16,7 +16,7 @@
   <packaging>eclipse-feature</packaging>
 
   <properties>
-  	<output-directory>${basedir}/../../releng/target/WEB-INF</output-directory>
+  	<output-directory>${basedir}/../../releng/product/target/WEB-INF</output-directory>
   </properties>
  
   <build>
@@ -36,7 +36,7 @@
 			<executions>
 				<execution>
 					<id>copy-plugins</id>
-					<phase>deploy</phase>
+					<phase>install</phase>
 					<goals>
 						<goal>copy-resources</goal>
 					</goals>
@@ -53,41 +53,8 @@
 									<exclude>artifacts.jar</exclude>
 								</excludes>
 							</resource>
-<!--
-							<resource>
-								<directory>${basedir}/../../releng/product/target/repository</directory>
-								<includes>
-									<include>*/**</include>
-								</includes>
-								<excludes>
-									<exclude>content.jar</exclude>
-									<exclude>artifacts.jar</exclude>
-								</excludes>
-							</resource>
--->
 						</resources>
 					</configuration>
-				</execution>
-			</executions>
-		</plugin>
-
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-assembly-plugin</artifactId>
-			<version>2.2-beta-5</version>
-			<configuration>
-				<descriptors>
-					<descriptor>assembly.xml</descriptor>
-				</descriptors>
-				<finalName>sca</finalName>
-			</configuration>
-			<executions>
-				<execution>
-					<id>make-assembly</id>
-					<phase>deploy</phase>
-					<goals>
-						<goal>single</goal>
-					</goals>
 				</execution>
 			</executions>
 		</plugin>

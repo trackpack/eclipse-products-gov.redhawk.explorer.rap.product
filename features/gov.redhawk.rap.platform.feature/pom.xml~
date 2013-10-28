@@ -16,9 +16,9 @@
   <packaging>eclipse-feature</packaging>
 
   <properties>
-  	<output-directory>${basedir}/../../releng/target/WEB-INF</output-directory>
+  	<output-directory>${basedir}/../../releng/product/target/WEB-INF</output-directory>
   </properties>
-
+<!--
   <build>
 	<plugins>
 		<plugin>
@@ -37,24 +37,17 @@
 							<resource>
 								<directory>${basedir}/../../releng/product/target/products/gov.redhawk.explorer.rap.product/linux/gtk/x86_64/WEB-INF</directory>
 								<includes>
-									<include>**</include>
+									<include>*/**</include>
 								</includes>
 								<excludes>
-									<exclude>*/javax.servlet*</exclude>
-									<exclude>*/gov.redhawk.entrypoint*</exclude>
+									<exclude>plugins</exclude>
+									<exclude>features</exclude>
 									<exclude>web.xml</exclude>
 								</excludes>
 							</resource>
-							<resource>
-								<directory>${basedir}/rootfiles</directory>
-								<includes>
-									<include>web.xml</include>
-								</includes>
-							</resource>
 						</resources>
 					</configuration>
-					</execution>
-<!--
+				</execution>
 				<execution>
 					<id>copy-plugins</id>
 					<phase>install</phase>
@@ -76,26 +69,12 @@
 									<exclude>*/web.xml</exclude>
 								</excludes>
 							</resource>
-							
-
-							<resource>
-								<directory>${basedir}/../../releng/product/target/repository</directory>
-								<includes>
-									<include>*/**</include>
-								</includes>
-								<excludes>
-									<exclude>content.jar</exclude>
-									<exclude>artifacts.jar</exclude>
-								</excludes>
-							</resource>
-
 						</resources>
 					</configuration>
 				</execution>
--->
 			</executions>
 		</plugin>
 	</plugins>
   </build>
-
+-->
 </project>
