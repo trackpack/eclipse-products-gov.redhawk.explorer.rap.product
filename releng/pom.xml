@@ -112,21 +112,12 @@
     </repository>
   </repositories>
 
-   <distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>dist</id>
-      <name>Distributuion Repo</name>
-      <url>file:dist</url>
-      <layout>default</layout>
-    </repository>
-  </distributionManagement>
-
   <modules>
     <module>../features/org.eclipse.tycho.apdetargetplatform.feature</module>
     <module>../features/gov.redhawk.entrypoint.scaExplorer.feature</module>
     <module>../features/gov.redhawk.rap.platform.feature</module>
     <module>../plugins/gov.redhawk.entrypoint.scaExplorer</module>
+    <module>../plugins/gov.redhawk.entrypoint.scaExplorer.jetty</module>
     <module>p2</module>
     <module>product</module>
   </modules>

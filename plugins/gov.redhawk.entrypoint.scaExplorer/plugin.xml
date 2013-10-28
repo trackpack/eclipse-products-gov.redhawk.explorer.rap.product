@@ -134,16 +134,4 @@
             title="SCA Explorer">
       </branding>
    </extension>
-   <extension
-         id="application"
-         point="org.eclipse.core.runtime.applications">
-      <application
-            cardinality="singleton-global"
-            thread="main"
-            visible="true">
-         <run
-               class="gov.redhawk.entrypoint.scaexplorer.Application">
-         </run>
-      </application>
-   </extension>
 </plugin>

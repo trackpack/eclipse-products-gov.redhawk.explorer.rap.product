@@ -30,7 +30,6 @@
     <rap-tab>http://download.eclipse.org/rt/rap/incubator/nightly/tabbed-properties/</rap-tab>
     <org.eclipse.emf.transaction.ui>http://download.redhawksdr.org/org.eclipse.emf.transaction.ui/</org.eclipse.emf.transaction.ui>
     <tycho-groupid>org.eclipse.tycho</tycho-groupid>
-    <output-directory>${basedir}/../features/gov.redhawk.entrypoint.scaExplorer.feature/target/WEB-INF</output-directory>
   </properties>
 
   <repositories>
@@ -113,12 +112,12 @@
     </repository>
   </repositories>
 
-  <distributionManagement>
+   <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
-      <id>rap-war</id>
-      <name>RAP WAR File Repository</name>
-      <url>file:war_file</url>
+      <id>dist</id>
+      <name>Distributuion Repo</name>
+      <url>file:dist</url>
       <layout>default</layout>
     </repository>
   </distributionManagement>
@@ -128,6 +127,7 @@
     <module>../features/gov.redhawk.entrypoint.scaExplorer.feature</module>
     <module>../features/gov.redhawk.rap.platform.feature</module>
     <module>../plugins/gov.redhawk.entrypoint.scaExplorer</module>
+    <module>../plugins/gov.redhawk.entrypoint.scaExplorer.jetty</module>
     <module>p2</module>
     <module>product</module>
   </modules>
@@ -219,109 +219,6 @@
           </dependency-resolution>
         </configuration>
       </plugin>
-
-      <plugin>
-			<artifactId>maven-resources-plugin</artifactId>
-			<version>2.4.3</version>
-			<executions>
-				<execution>
-					<id>copy-web-inf-and-target-plugins</id>
-					<phase>deploy</phase>
-					<goals>
-						<goal>copy-resources</goal>
-					</goals>
-					<configuration>
-						<outputDirectory>${output-directory}</outputDirectory>
-						<resources>
-							<resource>
-								<directory>${basedir}/product/target/products/gov.redhawk.explorer.rap.product/linux/gtk/x86_64/WEB-INF</directory>
-								<includes>
-									<include>**</include>
-								</includes>
-								<excludes>
-									<exclude>*/javax.servlet*</exclude>
-									<exclude>*/gov.redhawk.entrypoint*</exclude>
-									<exclude>web.xml</exclude>
-								</excludes>
-							</resource>
-						</resources>
-					</configuration>
-					</execution>
-				<execution>
-					<id>copy-plugins</id>
-					<phase>deploy</phase>
-					<goals>
-						<goal>copy-resources</goal>
-					</goals>
-					<configuration>
-						<outputDirectory>${output-directory}</outputDirectory>
-						<resources>
-							<resource>
-								<directory>${basedir}/../features/gov.redhawk.rap.platform.feature/target/site</directory>
-								<includes>
-									<include>*/**</include>
-								</includes>
-								<excludes>
-									<exclude>content.jar</exclude>
-									<exclude>artifacts.jar</exclude>
-									<exclude>*/javax.servlet*</exclude>
-									<exclude>*/web.xml</exclude>
-								</excludes>
-							</resource>
-							<resource>
-								<directory>${basedir}/../features/gov.redhawk.entrypoint.scaExplorer.feature/target/site</directory>
-								<includes>
-									<include>*/**</include>
-								</includes>
-								<excludes>
-									<exclude>content.jar</exclude>
-									<exclude>artifacts.jar</exclude>
-								</excludes>
-							</resource>
-							<resource>
-								<directory>${basedir}/../features/gov.redhawk.rap.platform.feature/rootfiles</directory>
-								<includes>
-									<include>web.xml</include>
-								</includes>
-							</resource>
-<!--
-							<resource>
-								<directory>${basedir}/../../releng/product/target/repository</directory>
-								<includes>
-									<include>*/**</include>
-								</includes>
-								<excludes>
-									<exclude>content.jar</exclude>
-									<exclude>artifacts.jar</exclude>
-								</excludes>
-							</resource>
--->
-						</resources>
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
-
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-assembly-plugin</artifactId>
-			<version>2.2-beta-5</version>
-			<configuration>
-				<descriptors>
-					<descriptor>assembly.xml</descriptor>
-				</descriptors>
-				<finalName>sca</finalName>
-			</configuration>
-			<executions>
-				<execution>
-					<id>make-assembly</id>
-					<phase>deploy</phase>
-					<goals>
-						<goal>single</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
     </plugins>
   </build>
 </project>

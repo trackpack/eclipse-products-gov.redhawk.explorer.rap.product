@@ -27,8 +27,6 @@ public class EntrypointActivator extends AbstractUIPlugin {
 	
 	public static final String PROP_SINGLE_DOMAIN = "gov.redhawk.ui.singleDomain";
 
-	public static final String PROP_JACORB_ORB_CLASS = "org.omg.CORBA.ORBClass";
-
 	public static final String PROP_JACORB_ORB_SINGLETON_CLASS = "org.omg.CORBA.ORBSingletonClass";
 
 	// The shared instance
