@@ -23,6 +23,7 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IElementFactory;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IPersistableElement;
@@ -59,6 +60,8 @@ public class ResourceFactory implements IElementFactory, IPersistableElement {
 	 * IElementFactory side.
 	 */
 	public ResourceFactory() {
+		
+		Display display;
 	}
 
 	/**

@@ -49,7 +49,6 @@
 									<include>*/**</include>
 								</includes>
 								<excludes>
-									<exclude>**/*jetty*</exclude>
 									<exclude>content.jar</exclude>
 									<exclude>artifacts.jar</exclude>
 								</excludes>
