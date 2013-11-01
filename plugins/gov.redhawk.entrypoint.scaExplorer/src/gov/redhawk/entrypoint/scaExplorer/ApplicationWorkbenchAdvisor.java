@@ -11,6 +11,8 @@
  */
 package gov.redhawk.entrypoint.scaExplorer;
 
+import gov.redhawk.sca.ui.ScaUiPlugin;
+
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IAdaptable;
