@@ -11,8 +11,6 @@
  */
 package gov.redhawk.entrypoint.scaExplorer;
 
-import gov.redhawk.sca.ui.ScaUiPlugin;
-
 import java.io.IOException;
 import java.util.logging.LogManager;
 
