@@ -17,6 +17,7 @@
 -Dorg.omg.CORBA.ORBSingletonClass=org.jacorb.orb.ORBSingleton
 -Dorg.omg.PortableInterceptor.ORBInitializerClass.standard_init=org.jacorb.orb.standardInterceptors.IORInterceptorInitializer
 -Djacorb.config.dir=configuration
+-Dorg.eclipse.rwt.settingStoreFactory=gov.redhawk.sca.ui.rap.factory
 -Declipse.ignoreApp=true
 -Dosgi.noShutdown=true
 -Dorg.eclipse.equinox.http.jetty.log.stderr.threshold=info
@@ -50,9 +51,6 @@
       <plugin id="org.eclipse.ecf" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.ecf.filetransfer" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.ecf.provider.filetransfer" autoStart="true" startLevel="4" />
-      <plugin id="org.eclipse.rap.ui" autoStart="true" startLevel="4" />
-      <plugin id="org.eclipse.rap.rwt" autoStart="true" startLevel="4" />
-      <plugin id="org.eclipse.rap.rwt.osgi" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.app" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
@@ -68,6 +66,9 @@
       <plugin id="org.eclipse.equinox.servletbridge" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.rap.rwt" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.rap.rwt.osgi" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.rap.ui" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
    </configurations>
 
