@@ -12,7 +12,7 @@
   </parent>
 
   <properties>
-  	<output-directory>${basedir}/../product/target/WEB-INF</output-directory>
+  	<output-directory>${basedir}/target/WEB-INF</output-directory>
   </properties>
 
   <build>
@@ -46,14 +46,13 @@
           </products>
         </configuration>
       </plugin>
-
        <plugin>
 			<artifactId>maven-resources-plugin</artifactId>
 			<version>2.4.3</version>
 			<executions>
 				<execution>
 					<id>copy-web-inf-and-target-plugins</id>
-					<phase>deploy</phase>
+					<phase>package</phase>
 					<goals>
 						<goal>copy-resources</goal>
 					</goals>
@@ -68,6 +67,7 @@
 								<excludes>
 									<exclude>web.xml</exclude>
 									<exclude>**/javax.servlet*</exclude>
+									<exclude>**/*jetty*/**</exclude>
 								</excludes>
 							</resource>
 							<resource>
@@ -75,6 +75,10 @@
 								<includes>
 									<include>web.xml</include>
 								</includes>
+								<excludes>
+
+									<exclude>**/*jetty*</exclude>
+								</excludes>
 							</resource>
 						</resources>
 					</configuration>
@@ -82,7 +86,7 @@
 			</executions>
 	</plugin>
 
-        <plugin>
+	<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-assembly-plugin</artifactId>
 			<version>2.2-beta-5</version>
@@ -95,7 +99,7 @@
 			<executions>
 				<execution>
 					<id>make-assembly</id>
-					<phase>deploy</phase>
+					<phase>package</phase>
 					<goals>
 						<goal>single</goal>
 					</goals>
