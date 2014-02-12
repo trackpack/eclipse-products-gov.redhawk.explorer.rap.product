@@ -20,7 +20,7 @@
     <eclipse>http://download.eclipse.org/releases/juno</eclipse>
     <eclipse-updates>http://download.eclipse.org/eclipse/updates/3.8</eclipse-updates>
     <orbit>http://download.eclipse.org/tools/orbit/downloads/drops/R20130118183705/repository</orbit>
-    <mil.jpeojtrs.sca>http://download.redhawksdr.org/mil.jpeojtrs.sca/releases/1.9</mil.jpeojtrs.sca>
+    <mil.jpeojtrs.sca>http://download.redhawksdr.org/mil.jpeojtrs.sca/releases/1.10</mil.jpeojtrs.sca>
     <nxm>http://nextmidas.techma.com/p2/nxm/updates/stable</nxm>
     <nxm-ui>http://download.redhawksdr.org/nxm-rcp/releases/1.0</nxm-ui>
     <jacorb>http://download.redhawksdr.org/jacorb/releases/3.1</jacorb>
@@ -33,7 +33,6 @@
   </properties>
 
   <modules>
-    <module>target-definition</module>
     <module>../features/org.eclipse.tycho.apdetargetplatform.feature</module>
     <module>../features/gov.redhawk.entrypoint.scaExplorer.feature</module>
     <module>../features/gov.redhawk.rap.platform.feature</module>
@@ -41,6 +40,81 @@
     <module>p2</module>
     <module>product</module>
   </modules>
+
+
+  <repositories>
+    <repository>
+      <id>eclipse</id>
+      <layout>p2</layout>
+      <url>${eclipse}</url>
+    </repository>
+
+    <repository>
+      <id>orbit</id>
+      <layout>p2</layout>
+      <url>${orbit}</url>
+    </repository>
+
+    <repository>
+      <id>nxm</id>
+      <layout>p2</layout>
+      <url>${nxm}</url>
+    </repository>
+
+    <repository>
+      <id>nxm-ui</id>
+      <layout>p2</layout>
+      <url>${nxm-ui}</url>
+    </repository>
+
+    <repository>
+      <id>mil.jpeojtrs.sca</id>
+      <layout>p2</layout>
+      <url>${mil.jpeojtrs.sca}</url>
+    </repository>
+
+    <repository>
+      <id>gov.redhawk.core</id>
+      <layout>p2</layout>
+      <url>${gov.redhawk.core}</url>
+    </repository>
+
+    <repository>
+      <id>gov.redhawk.core.rap</id>
+      <layout>p2</layout>
+      <url>${gov.redhawk.core.rap}</url>
+    </repository>
+
+    <repository>
+      <id>org.eclipse.emf.transaction.ui</id>
+      <layout>p2</layout>
+      <url>${org.eclipse.emf.transaction.ui}</url>
+    </repository>
+
+    <repository>
+      <id>rap-cnf</id>
+      <layout>p2</layout>
+      <url>${rap-cnf}</url>
+    </repository>
+
+    <repository>
+      <id>rap-tab</id>
+      <layout>p2</layout>
+      <url>${rap-tab}</url>
+    </repository>
+
+    <repository>
+      <id>org.omg.jacorb</id>
+      <layout>p2</layout>
+      <url>${jacorb}</url>
+    </repository>
+
+    <repository>
+      <id>nebula</id>
+      <layout>p2</layout>
+      <url>${nebula}</url>
+    </repository>
+  </repositories>
 
   <build>
     <plugins>
@@ -65,13 +139,6 @@
         <artifactId>target-platform-configuration</artifactId>
         <version>${tycho-version}</version>
         <configuration>
-          <target>
-            <artifact>
-              <groupId>gov.redhawk.explorer.rap.product</groupId>
-              <artifactId>target-definition</artifactId>
-              <version>1.10.0-SNAPSHOT</version>
-            </artifact>
-          </target>
           <resolver>p2</resolver>
           <ignoreTychoRepositories>true</ignoreTychoRepositories>
           <dependency-resolution>
